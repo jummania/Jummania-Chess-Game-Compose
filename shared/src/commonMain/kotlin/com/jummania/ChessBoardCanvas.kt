@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
@@ -56,7 +57,7 @@ fun ChessBoardCanvas(
     var selectedRowNumber = -1
     var isSelected = false
 
-    // val chessFont = //FontFamily(getFont(symbolStyle.style))
+    val chessFont = FontFamily(getFont(symbolStyle.style))
 
     var clickPosition by remember { mutableStateOf(Offset.Zero) }
 
@@ -188,7 +189,7 @@ fun ChessBoardCanvas(
                         fontSize = fontSize,
                         fontWeight = if (symbolStyle.useBold) FontWeight.Bold else FontWeight.Normal,
                         textAlign = TextAlign.Center,
-                        //    fontFamily = chessFont
+                        fontFamily = chessFont
                     )
 
 
@@ -271,7 +272,7 @@ fun ChessBoardCanvas(
                 fontSize = fontSize / 2f,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
-                // fontFamily = chessFont
+                fontFamily = chessFont
             )
         )
 
