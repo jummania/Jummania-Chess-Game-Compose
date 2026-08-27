@@ -5,3 +5,6 @@ interface Platform {
 }
 
 expect fun getPlatform(): Platform
+
+//@Composable
+//expect fun getFont(symbolStyle: SymbolStyle): Font
